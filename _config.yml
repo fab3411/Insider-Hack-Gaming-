@@ -1,0 +1,11 @@
+title: "Insider Hack Gaming"
+email: "contact@insiderhackgaming.example"
+description: "News, guides et projets — Insider Hack Gaming."
+baseurl: "" # laisser vide si publié sur username.github.io/repo
+url: "https://fab3411.github.io/Insider-Hack-Gaming-"
+permalink: /:title/
+theme: "" # on utilise un layout personnalisé
+logo: /assets/images/logo.png
+banner: /assets/images/banner.jpg
+paginate: 5
+"Ajout structure Jekyll minimal"
