@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          {% if site.logo %}
+            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" class="site-logo" />
+          {% else %}
+            <h1>{{ site.title }}</h1>
+          {% endif %}
+        </a>
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}">Accueil</a>
+          <a href="{{ '/a-propos/' | relative_url }}">À propos</a>
+        </nav>
+      </div>
+
+      {% if site.banner %}
+      <div class="site-banner">
+        <img src="{{ site.banner | relative_url }}" alt="Bannière" />
+      </div>
+      {% endif %}
+    </header>
+
+    <main class="site-main wrap">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} — Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
